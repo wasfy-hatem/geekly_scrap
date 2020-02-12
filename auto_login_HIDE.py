@@ -1,4 +1,4 @@
-
+import secrets
 import jsonpickle
 #import json
 import simplejson as json
@@ -31,8 +31,8 @@ def get_login_and_hide(filtered_by_user_results_url):
    driver.get(site_url_login)
 
    #login url
-   driver.find_element_by_name("email").send_keys('h-wasfi@jellyfish-g.co.jp')
-   driver.find_element_by_name("passwd").send_keys("jellyfish1234")
+   driver.find_element_by_name("email").send_keys(secrets.email)
+   driver.find_element_by_name("passwd").send_keys(secrets.passwd)
    driver.find_element_by_name("submit").click()
 
    #add_the next URL
